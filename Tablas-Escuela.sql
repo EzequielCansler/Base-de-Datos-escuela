@@ -1,5 +1,10 @@
+IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'EscuelaDB') 
+BEGIN
+  CREATE DATABASE EscuelaDB; 
+END GO
 
-
+USE EscuelaDB; GO
+  
 CREATE TABLE Turno (
   turno_id INT PRIMARY KEY IDENTITY(1,1),
   nombre VARCHAR(50) NOT NULL
